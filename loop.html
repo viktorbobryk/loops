@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <p>Начало документа...</p>
+  <script>
+  <!-- 1 -->
+  document.write("task1");
+	document.write("<br>");
+   for(var i = 10; i < 20; i++){
+	document.write(i*i);
+	document.write(" <br>");
+   }
+
+   
+   <!-- 2 -->
+   document.write(" <br>");
+   document.write("task2");
+	document.write("<br>");
+   var n =prompt('enter max number', n)
+   var sum = 0;
+   for(i=1;i<=n;i++){
+	sum+=i;
+   }
+   document.write(" <br>");
+   document.write(sum);
+   
+   
+   <!-- 3 -->
+   document.write(" <br>");
+   document.write("task3");
+   document.write("<br>");
+   var multiple = prompt('enter max number', n)
+   var sum = 1;
+   for(i=1;i<=n;i++){
+	sum*=i;
+   }
+   document.write(" <br>");
+   document.write(sum);
+   
+   
+   <!-- 4 -->
+   document.write(" <br>");
+   document.write("task4");
+   document.write("<br>");
+   var ask =prompt('how many numbers do you want to enter?', n);
+   var arr = [];
+   var pos = 0;
+   var neg = 0;
+   var zero = 0;
+   for(i=0;i<ask;i++){
+	var num = prompt("enter number");
+	arr[i] = num;
+   }
+   document.write(arr);
+   for(i=0;i<arr.length;i++){
+    if(arr[i] < 0){
+		neg++;
+	}
+	if(arr[i] > 0){
+		pos++;
+	}
+	if(arr[i] == 0){
+		zero++;
+	}
+   }
+   document.write(" <br>");
+   document.write("you entered " + neg + " negative numbers");
+   document.write(" <br>");
+   document.write("you entered " + pos + " positive numbers");
+   document.write(" <br>");
+   document.write("you entered " + zero + " zeros");
+   
+   
+   <!-- 5 -->
+   document.write(" <br>");
+   document.write("task5");
+   document.write("<br>");
+   function convert(measure, quantity){
+	switch (measure) {
+  case "сажень":
+		document.write("you have " + quantity * 2.1366 + " meters");
+    break;
+  case "фут":
+		document.write("you have " + quantity * 0.3048 + " santimeters");
+    break;
+	 case "фунт":
+		document.write("you have " + quantity * 0.4095 + " santimeters");
+    break;
+  case "драхма":
+		document.write("you have " + quantity * 3.7325 + " grams");
+    break;
+	case "унция":
+		document.write("you have " + quantity * 29.86 + " grams");
+    break;
+  case "аршин":
+	document.write("you have " + quantity * 0.7112 + " meters");
+    break;
+  case "золотник":
+		document.write("you have " + quantity * 4.2657 + " kilograms");
+    break;
+	case "дюйм":
+		document.write("you have " + quantity * 25.3995 + " milimeters");
+    break;
+  default:
+    alert( 'wrong value' );
+}
+   }
+   convert("фут", 1);
+  
+  
+  
+  
+  <!-- 6 -->
+  document.write(" <br>");
+  document.write("task6");
+  document.write("<br>");
+   var s = 1000;
+   var n = 2;
+   var p = 0.03;
+   var sum = 0;
+   for(i=0;i<n;i++){
+	var psum = s * p;
+	sum = sum + psum;
+	s += sum;
+   }
+   document.write("you will earn " + sum + " rubls");
+   
+   /*
+    <!-- 7 -->
+	document.write("task7");
+	document.write("<br>");
+	function pairs(a,b){
+		if(a > b){
+			document.write(a);
+			document.write("<br>");
+		}
+		else(a > b){
+			document.write(a);
+			document.write("<br>");
+		}
+	}
+	pairs(3, 6);
+	for(i=0;i<10;i++){
+		pairs();
+	}
+	*/
+	<!-- 8 -->
+	document.write(" <br>");
+	document.write("task8");
+	document.write("<br>");
+	for(i=20;i<=50;i++){
+		if(i % 3 == 0 && i % 5 != 0){
+			document.write(i);
+			document.write("<br>");
+		}
+	}
+	
+	<!-- 11 -->
+	document.write(" <br>");
+	document.write("task 11");
+	document.write("<br>");
+	for(i=0;i<=99;i++){
+		if(i % 4 == 0 && i % 6 != 0){
+			document.write(i);
+			document.write("<br>");
+		}
+	}
+  </script>
+
+  <p>...Конец документа</p>
+
+</body>
+
+</html>
