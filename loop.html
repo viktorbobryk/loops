@@ -23,7 +23,7 @@
    document.write(" <br>");
    document.write("task2");
 	document.write("<br>");
-   var n =prompt('enter max number', n)
+   var n = parseInt(prompt('enter max number', n));
    var sum = 0;
    for(i=1;i<=n;i++){
 	sum+=i;
@@ -36,7 +36,7 @@
    document.write(" <br>");
    document.write("task3");
    document.write("<br>");
-   var multiple = prompt('enter max number', n)
+   var multiple = pardeInt(prompt('enter max number', n));
    var sum = 1;
    for(i=1;i<=n;i++){
 	sum*=i;
@@ -49,13 +49,13 @@
    document.write(" <br>");
    document.write("task4");
    document.write("<br>");
-   var ask =prompt('how many numbers do you want to enter?', n);
+   var ask = parseInt(prompt('how many numbers do you want to enter?', n));
    var arr = [];
    var pos = 0;
    var neg = 0;
    var zero = 0;
    for(i=0;i<ask;i++){
-	var num = prompt("enter number");
+	var num = parseInt(prompt("enter number"));
 	arr[i] = num;
    }
    document.write(arr);
@@ -134,8 +134,8 @@
 	document.write("task7");
 	document.write("<br>");
 	for (var i = 1; i <= 10; i++) {
-		var f = parseInt (prompt("enter first number"));
-		var s = parseInt (prompt("enter second number"));
+		var f = parseInt(prompt("enter first number"));
+		var s = parseInt(prompt("enter second number"));
 		if (f > s) 	{
 		document.write("pair" + i + ": max number is " + f + "<br>");
 		}
@@ -211,23 +211,170 @@
 		sum += i * i;
 	}
 	document.write("sum = " + sum);
-	 <!-- 15 -->
+	<!-- 15 -->
+	var a = parseInt(prompt("enter first number"));
+	var b = parseInt(prompt("enter second number"));var pow = 0;
+	for (var i = a; i <= b; i++) {
+		pow += a * a;
+	}
+	document.write("power = " + pow);
 	<!-- 16 -->
+	var mower = parseInt(prompt("enter number of mowers"));
+	var t = parseInt(prompt("how much of time first mower worked ?")) * 60;
+	var ct = t;
+	for (var i = 1; i < mower; i++) {
+		t += 10;
+	}
+	document.write("common time = " + (t + ct));
 	<!-- 17 -->
+	var pupils = parseInt(prompt("enter number of pupils"));
+	var sum = 0;
+	for (var i = 1; i <= pupils; i++) {
+		var height = parseInt(prompt("enter the height of  pupil"));
+		sum += height;
+	}
+	document.write("average height of pupils = " + (sum / pupils));
 	<!-- 18 -->
+	var num = parseInt(prompt("enter natural number"));
+	var sum = 0;
+	for (var i = 0; i <= num; i++) {
+		if((i % 2 != 0) && (i % 3 != 0) && (i % 5 != 0) ){
+			document.write(i + "<br>");
+			sum++;
+		}
+	}
+	document.write("quantity of your numbers are : " + sum);
 	<!-- 19 -->
+	var num ;
+	var count = 1;
+	for (var i = 10; i < 100; i++) {
+		for (var j = 10; j < 100; j++){
+			num = "" + i + j;								
+			if ((parseInt(num) % (i * j) == 0)){
+				document.write("Pair " + count + ": " + i + " and " + j + "<br>");
+				count++;
+			};			
+		}
+	}
 	<!-- 20 -->
+	var num1;
+	var num2;
+	for (var i = 10; i < 100; i++) {
+		for (var j = 10; j < 100; j++){
+			num1 = '' + i + j;								
+			num2 = '' + j + i;								
+			if ((parseInt(num1) % 99 == 0) && (parseInt(num2) % 49 == 0)){
+				document.write("first number : " + num1 + "<br>" + "second number : " + num2);
+			};			
+		}
+	}	
 	<!-- 21 -->
+	var n = parseInt(prompt("enter  natural number"));
+	var res = 0;
+	var pov;
+	for (var i = 1; i <= n; i++) {
+		pow = ((2 * i) * (2 * i));
+		res += 1 / pow;				
+	}
+	document.write (res);
 	<!-- 22 -->
+	var num = parseInt(prompt("enter natural number"));
+	var res = 0;
+	for (var i = 1; i <= num; i++) {
+		res += 1 / i;				
+	}
+	document.write(res);
 	<!-- 23 -->
+	var res = 1;
+	var pow = 1;
+	for (var i = 1; i <= 10; i++) {
+		pow = pow * 2;
+		res += pow;
+	}	
+	document.write(res);
 	<!-- 24 -->
+	var res = 1;			
+	var sum = 0;
+	for (var i = 1; i <= 10; i++) {
+		for (var j = 1; j <= i; j++) {
+			sum = sum + j;					
+		}
+		res = res * sum;
+		sum = 0;				
+	}
+	document.write(res);
 	<!-- 25 -->
+	var a = parseFloat(prompt("enter float number"));
+	var n = parseInt(prompt("enter integer number"));
+	var res = 1;
+	for (var i = 1; i <= n; i++) {				
+		res = res * (a + i - 1) ;
+	}
+	document.write(res);
 	<!--26 -->
+	var x = parseFloat(prompt("enter float number"));
+	var n = parseInt(prompt("enter integer number"));
+	var res = 0;
+	for (var i = 1; i <= n; i++) {				
+		res += Math.sin(x);
+		x = x * x;								
+	}
+	document.write(res);
 	<!-- 27 -->
+		var money = parseInt(prompt("how much money child has"));
+	var price = parseInt(prompt("how much icecream costs"));
+	var i = 0;
+	while (money > 0) {
+		if ((money - price) < 0) {
+			break;
+		}
+		money = money - price;
+		i++;
+	}
+	document.write("he ate " + i + " icecreams, he has " + money + " rubls");	
 	<!-- 28 -->
+	var credit = parseInt(prompt("enter sum of credit"));
+	var s = parseInt(prompt("enter limit"));
+	var i = 0;
+	while (credit < s) {
+		if ((credit + credit * 0.2) > s) {
+			break;
+		}
+		credit += credit * 0.2;
+		i++;				
+	}
+	document.write("credit will be passed in " + i + " years");	
 	<!-- 29 -->
+	var i = 0;			
+	while (i <= 100) {				
+		if (i % 2 == 0) {
+			document.write(i + "<br>");
+		}
+		i++;				
+	}
 	<!-- 30 -->
+	var sum = 0;
+var i = 0;			
+while (i < 100) {				
+	if (i % 2 !== 0) {
+		sum += i;
+		document.write(i + "<br>");
+	}
+	i++;				
+}
+document.write(sum);
 	<!-- 31 -->
+var material = parseInt(prompt("enter length of material"));
+var piece = parseInt(prompt("enter length of piece"));
+var i = 0;
+while (material > 0) {
+	if (material < piece) {
+		document.write("too little of material for this piece");
+	}
+	material = material - piece;
+	i++;
+}
+document.write("cutted " + i + " pieces, rest : " + material + "m");
   </script>
 
   <p>...Конец документа</p>
