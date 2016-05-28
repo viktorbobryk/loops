@@ -8,7 +8,7 @@
 
 <body>
 
-  <h3>Щоб перевірити домашню роботу натисніть клавішу F12, потім в консолі введіть назву функції (task1(), task2() ...)</h3>
+  <h3>Щоб перевірити домашню роботу натисніть клавішу F12, потім в консолі введіть назву функції (task1(), task2() ...php9())</h3>
   <script>
   <!-- 1 -->
 function task1(){
@@ -19,8 +19,7 @@ function task1(){
 	document.write(" <br>");
 	}
 }
-   
-   <!-- 2 -->
+	<!-- 2 -->
 function task2(){
 	document.write(" <br>");
 	document.write("2. Составьте программу, которая вычисляет сумму чисел от 1 до n.значение n вводится с клавиатуры.");
@@ -30,41 +29,41 @@ function task2(){
 	for(i=1;i<=n;i++){
 	sum+=i;
 	}
-   document.write(" <br>");
-   document.write(sum);
+	document.write(" <br>");
+	document.write(sum);
 } 
-   
-   <!-- 3 -->
+
+	<!-- 3 -->
  function task3(){  
-   document.write(" <br>");
-   document.write("3. Составьте программу, составьте программу, которая вычисляет произведение чисел от 1 до n.n вводится с клавиатуры.");
-   document.write("<br>");
-   var mult = parseInt(prompt('enter max number', mult));
-   var sum = 1;
-   for(i=1;i<=mult;i++){
-	sum*=i;
-   }
-   document.write(" <br>");
-   document.write(sum);
-}   
-   
-   <!-- 4 -->
+	document.write(" <br>");
+	document.write("3. Составьте программу, составьте программу, которая вычисляет произведение чисел от 1 до n.n вводится с клавиатуры.");
+	document.write("<br>");
+	var mult = parseInt(prompt('enter max number', mult));
+	var sum = 1;
+	for(i=1;i<=mult;i++){
+		sum*=i;
+	}
+	document.write(" <br>");
+	document.write(sum);
+}
+
+	<!-- 4 -->
  function task4(){  
-   document.write(" <br>");
-   document.write("4. С клавиатуры вводятся n чисел. Составьте программу, которая определяет кол-во отрицательных, кол-во положительных и кол-во нулей");
-   document.write("<br>");
-   var ask = parseInt(prompt('how many numbers do you want to enter?', ask));
-   var arr = [];
-   var pos = 0;
-   var neg = 0;
-   var zero = 0;
-   for(i=0;i<ask;i++){
+	document.write(" <br>");
+	document.write("4. С клавиатуры вводятся n чисел. Составьте программу, которая определяет кол-во отрицательных, кол-во положительных и кол-во нулей");
+	document.write("<br>");
+	var ask = parseInt(prompt('how many numbers do you want to enter?', ask));
+	var arr = [];
+	var pos = 0;
+	var neg = 0;
+	var zero = 0;
+	for(i=0;i<ask;i++){
 	var num = parseInt(prompt("enter number"));
 	arr[i] = num;
-   }
-   document.write(arr);
-   for(i=0;i<arr.length;i++){
-    if(arr[i] < 0){
+	}
+	document.write(arr);
+	for(i=0;i<arr.length;i++){
+		if(arr[i] < 0){
 		neg++;
 	}
 	if(arr[i] > 0){
@@ -73,41 +72,41 @@ function task2(){
 	if(arr[i] == 0){
 		zero++;
 	}
-   }
-   document.write(" <br>");
-   document.write("you entered " + neg + " negative numbers");
-   document.write(" <br>");
-   document.write("you entered " + pos + " positive numbers");
-   document.write(" <br>");
-   document.write("you entered " + zero + " zeros");
-}   
-   
+	}
+	document.write(" <br>");
+	document.write("you entered " + neg + " negative numbers");
+	document.write(" <br>");
+	document.write("you entered " + pos + " positive numbers");
+	document.write(" <br>");
+	document.write("you entered " + zero + " zeros");
+}
+
    <!-- 5 -->
  function task5(){
-   document.write(" <br>");
-   document.write("5. Составьте программы перевода старинных русских мер длины");
-   document.write("<br>");
-   var measure = prompt("enter anciet measure", measure);
-   var quantity = parseInt(prompt("enter quantity"));
+	document.write(" <br>");
+	document.write("5. Составьте программы перевода старинных русских мер длины");
+	document.write("<br>");
+	var measure = prompt("enter anciet measure", measure);
+	var quantity = parseInt(prompt("enter quantity"));
 	switch (measure) {
 	case "сажень":
 		document.write("you have " + quantity * 2.1366 + " meters");
-    break;
+	break;
 	case "фут":
 		document.write("you have " + quantity * 0.3048 + " santimeters");
-    break;
+	break;
 	 case "фунт":
 		document.write("you have " + quantity * 0.4095 + " santimeters");
-    break;
+	break;
 	case "драхма":
 		document.write("you have " + quantity * 3.7325 + " grams");
-    break;
+	break;
 	case "унция":
 		document.write("you have " + quantity * 29.86 + " grams");
-    break;
+	break;
 	case "аршин":
 	document.write("you have " + quantity * 0.7112 + " meters");
-    break;
+	break;
 	case "золотник":
 		document.write("you have " + quantity * 4.2657 + " kilograms");
 	break;
@@ -118,6 +117,7 @@ function task2(){
 	alert( 'wrong value' );
 	}
 }
+
   <!-- 6 -->
 function task6(){
 	document.write(" <br>");
@@ -131,8 +131,8 @@ function task6(){
 	s = s + (s * p);
    }
    document.write("you will earn " + s + " rubls");
-}     
-   
+}
+
     <!-- 7 -->
 function task7(){
 	document.write("<br>7. Ввести с клавиатуры 10 пар чисел. сравнить числа в каждой паре и напечатать большие из них.");
@@ -148,6 +148,7 @@ function task7(){
 		}
 	}
 }
+
 	<!-- 8 -->
 function task8(){
 	document.write(" <br>");
@@ -160,6 +161,7 @@ function task8(){
 		}
 	}
 }
+
 	 <!-- 9 -->
 function task9(){
 	document.write(" <br>");
@@ -172,6 +174,7 @@ function task9(){
 		}
 	}
 }
+
 	<!-- 10 -->
 function task10(){
 	document.write(" <br>");
@@ -187,6 +190,7 @@ function task10(){
 	}
 	document.write(sum);
 }
+
 	<!-- 11 -->
 function task11(){
 	document.write(" <br>");
@@ -199,6 +203,7 @@ function task11(){
 		}
 	}
 }
+
 	 <!-- 12 -->
 function task12(){
 	document.write(" <br>");
@@ -212,6 +217,7 @@ function task12(){
 	}
 	document.write("<br>your result is - " + mult);
 }	
+
 	 <!-- 13 -->
 function task13(){
 	document.write(" <br>");
@@ -225,6 +231,7 @@ function task13(){
 	}
 	document.write("sum : " + sum);
 }
+
 	 <!-- 14 -->
 function task14(){
 	document.write(" <br>");
@@ -236,6 +243,7 @@ function task14(){
 	}
 	document.write("sum = " + sum);
 }
+
 	<!-- 15 -->
 function task15(){
 	document.write(" <br>");
@@ -247,6 +255,7 @@ function task15(){
 	}
 	document.write("power = " + pow);
 }
+
 	<!-- 16 -->
 function task16(){
 	document.write(" <br>");
@@ -261,6 +270,7 @@ function task16(){
 	}
 	document.write("common working time is : " + ct + " minutes");
 }
+
 	<!-- 17 -->
 function task17(){
 	document.write(" <br>");
@@ -273,6 +283,7 @@ function task17(){
 	}
 	document.write("average height of pupils = " + (sum / pupils));
 }
+
 	<!-- 18 -->
 function task18(){
 	document.write(" <br>");
@@ -287,6 +298,7 @@ function task18(){
 	}
 	document.write("quantity of your numbers are : " + sum);
 }
+
 	<!-- 19 -->
 function task19(){
 	document.write(" <br>");
@@ -303,6 +315,7 @@ function task19(){
 		}
 	}
 }
+
 	<!-- 20 -->
 function task20(){
 	document.write(" <br>");
@@ -318,7 +331,8 @@ function task20(){
 			};
 		}
 	}
-}	
+}
+	
 	<!-- 21 -->
 function task21(){
 	document.write(" <br>");
@@ -332,6 +346,7 @@ function task21(){
 	}
 	document.write (res);
 }
+
 	<!-- 22 -->
 function task22(){
 	document.write(" <br>");
@@ -343,6 +358,7 @@ function task22(){
 	}
 	document.write(res);
 }
+
 	<!-- 23 -->
 function task23(){
 	document.write(" <br>");
@@ -355,6 +371,7 @@ function task23(){
 	}	
 	document.write(res);
 }
+
 	<!-- 24 -->
 function task24(){
 	document.write(" <br>");
@@ -370,6 +387,7 @@ function task24(){
 	}
 	document.write(res);
 }
+
 	<!-- 25 -->
 function task25(){
 	document.write(" <br>");
@@ -382,6 +400,7 @@ function task25(){
 	}
 	document.write(res);
 }
+
 	<!--26 -->
 function task26(){
 	document.write(" <br>");
@@ -395,6 +414,7 @@ function task26(){
 	}
 	document.write(res);
 }
+
 	<!-- 27 -->document.write(" <br>");
 function task27(){
 	document.write(" <br>");
@@ -410,7 +430,8 @@ function task27(){
 		i++;
 	}
 	document.write("<br>he ate " + i + " icecreams, he has " + money + " rubls");
-}	
+}
+	
 	<!-- 28 -->
 function task28(){
 	document.write(" <br>");
@@ -426,7 +447,8 @@ function task28(){
 		i++;
 	}
 	document.write("<br>limit will be passed in " + i + " years");
-}	
+}
+	
 	<!-- 29 -->
 function task29(){
 	document.write(" <br>");
@@ -439,6 +461,7 @@ function task29(){
 		i++;
 	}
 }
+
 	<!-- 30 -->
 function task30(){
 	document.write(" <br>");
@@ -454,6 +477,7 @@ function task30(){
 	}
 	document.write("sum = " + sum);
 }
+
 	<!-- 31 -->
 function task31(){
 	document.write(" <br>");
@@ -471,6 +495,55 @@ function task31(){
 	i++;
 	}
 	document.write("rest : " + (material + piece) + "m");
+}
+	<!-- php4 -->
+function php4 () {
+			document.write(" <br>");
+			document.write("php4.Створити новий масив зі старого де після кожного від`ємного елемента вставити NULL.<br>");
+			var array = [-7, 0, 11, 5, -4, -4, 0, 12, -8];
+			var array2 = [];
+			for (var i = 0; i < array.length; i++) {
+				if (array[i] < 0) {
+					array2.push(array[i], "NULL");
+				} else {
+					array2.push(array[i]);
+				}
+			}
+			document.write("old array : " + array + "<br>");
+			document.write("new array : " + array2 + "<br>");
+		}
+	<!-- php7 -->		
+function php7() {
+			document.write(" <br>");
+			document.write("php7.Створити скрипт який порахує ваш середній бал за попередні курси в академії <br>");
+			var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+			var sum = 0;
+			for (var i = 0; i < array.length; i++) {				
+				sum += array[i];
+			}
+			document.write("average mark : " + (sum / array.length));
+}
+<!-- php9 -->		
+function php9() {
+	document.write(" <br>");
+	document.write("php9.Створити скрипт, який розбирає даний масив на нові в яких будуть тільки однорідні типи<br>");			
+	var array = [1, 0, '0', 33, 'hello', true, false, 'bye', 20., 0.35, 'ZR', 'a'];
+	var arrayNum = [];
+	var arrayBool = [];
+	var arrayStr = [];
+	for (var i = 0; i < array.length; i++) {
+		if (typeof array[i] == "number") {
+			arrayNum.push(array[i]);
+		} else if (typeof array[i] == "boolean") {
+			arrayBool.push(array[i]);
+		} else {
+			arrayStr.push(array[i]);
+		}
+	}
+	document.write("origin array : " + array + "<br>");
+	document.write("array of numbers : " + arrayNum + "<br>");
+	document.write(" array of booleans : " + arrayBool + "<br>");
+	document.write(" array ormstrings : " + arrayStr + "<br>");
 }
 	</script>
 
