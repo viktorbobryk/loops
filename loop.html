@@ -8,20 +8,22 @@
 
 <body>
 
-  <p>Начало документа...</p>
+  <h3>Щоб перевірити домашню роботу натисніть клавішу F12, потім в консолі введіть назву функції (task1(), task2() ...)</h3>
   <script>
   <!-- 1 -->
-	document.write("task1");
+function task1(){
+	document.write("1. Составьте программу, выводящую на экран квадраты чисел от 10 до 20.");
 	document.write("<br>");
 	for(var i = 10; i < 20; i++){
 	document.write(i*i);
 	document.write(" <br>");
 	}
-
+}
    
    <!-- 2 -->
+function task2(){
 	document.write(" <br>");
-	document.write("task2");
+	document.write("2. Составьте программу, которая вычисляет сумму чисел от 1 до n.значение n вводится с клавиатуры.");
 	document.write("<br>");
 	var n = parseInt(prompt('enter max number', n));
 	var sum = 0;
@@ -30,26 +32,28 @@
 	}
    document.write(" <br>");
    document.write(sum);
-   
+} 
    
    <!-- 3 -->
+ function task3(){  
    document.write(" <br>");
-   document.write("task3");
+   document.write("3. Составьте программу, составьте программу, которая вычисляет произведение чисел от 1 до n.n вводится с клавиатуры.");
    document.write("<br>");
-   var multiple = pardeInt(prompt('enter max number', n));
+   var mult = parseInt(prompt('enter max number', mult));
    var sum = 1;
-   for(i=1;i<=n;i++){
+   for(i=1;i<=mult;i++){
 	sum*=i;
    }
    document.write(" <br>");
    document.write(sum);
-   
+}   
    
    <!-- 4 -->
+ function task4(){  
    document.write(" <br>");
-   document.write("task4");
+   document.write("4. С клавиатуры вводятся n чисел. Составьте программу, которая определяет кол-во отрицательных, кол-во положительных и кол-во нулей");
    document.write("<br>");
-   var ask = parseInt(prompt('how many numbers do you want to enter?', n));
+   var ask = parseInt(prompt('how many numbers do you want to enter?', ask));
    var arr = [];
    var pos = 0;
    var neg = 0;
@@ -76,13 +80,15 @@
    document.write("you entered " + pos + " positive numbers");
    document.write(" <br>");
    document.write("you entered " + zero + " zeros");
-   
+}   
    
    <!-- 5 -->
+ function task5(){
    document.write(" <br>");
-   document.write("task5");
+   document.write("5. Составьте программы перевода старинных русских мер длины");
    document.write("<br>");
- function convert(measure, quantity){
+   var measure = prompt("enter anciet measure", measure);
+   var quantity = parseInt(prompt("enter quantity"));
 	switch (measure) {
 	case "сажень":
 		document.write("you have " + quantity * 2.1366 + " meters");
@@ -112,25 +118,24 @@
 	alert( 'wrong value' );
 	}
 }
-	convert("фут", 1);
   <!-- 6 -->
+function task6(){
 	document.write(" <br>");
-	document.write("task6");
+	document.write("6. В сберкассу на трёхпроцентный вклад положили S рублей.Какой станет сумма вклада через N лет.");
 	document.write("<br>");
-	var s = 1000;
-	var n = 2;
+	var s = parseInt(prompt("enter sum of money"));
+	var n = parseInt(prompt("enter period of deposit"));
 	var p = 0.03;
 	var sum = 0;
 	for(i=0;i<n;i++){
-	var psum = s * p;
-	sum = sum + psum;
-	s += sum;
+	s = s + (s * p);
    }
-   document.write("you will earn " + sum + " rubls");
-   
+   document.write("you will earn " + s + " rubls");
+}     
    
     <!-- 7 -->
-	document.write("task7");
+function task7(){
+	document.write("<br>7. Ввести с клавиатуры 10 пар чисел. сравнить числа в каждой паре и напечатать большие из них.");
 	document.write("<br>");
 	for (var i = 1; i <= 10; i++) {
 		var f = parseInt(prompt("enter first number"));
@@ -142,9 +147,11 @@
 		document.write("pair" + i + ": max number is " + s + "<br>");
 		}
 	}
+}
 	<!-- 8 -->
+function task8(){
 	document.write(" <br>");
-	document.write("task8");
+	document.write("8. Даны натуральные числа от 20 до 50.Напечатать те из них, которые делятся на 3, но не делятся на 5");
 	document.write("<br>");
 	for(i=20;i<=50;i++){
 		if(i % 3 == 0 && i % 5 != 0){
@@ -152,19 +159,23 @@
 			document.write("<br>");
 		}
 	}
+}
 	 <!-- 9 -->
+function task9(){
 	document.write(" <br>");
-	document.write("task8");
+	document.write("9. даны натуральные числа от 35 до 87. Найти и напечатать те из них, которые при делении на 7 дают остаток 1, 2 или 5");
 	document.write("<br>");
 	for(i=35;i<=87;i++){
-		if(i % 7 == 1 || i % 7 == 2 i % 7 == 5){
+		if(i % 7 == 1 || i % 7 == 2 || i % 7 == 5){
 			document.write(i);
 			document.write("<br>");
 		}
 	}
+}
 	<!-- 10 -->
+function task10(){
 	document.write(" <br>");
-	document.write("task8");
+	document.write("10. Даны натуральные числа от 1 до 50. Найти сумму тех из них, которые делятся на 5 или на 7.");
 	document.write("<br>");
 	var sum = 0;
 	for(i=1;i<=50;i++){
@@ -175,9 +186,11 @@
 		}
 	}
 	document.write(sum);
+}
 	<!-- 11 -->
+function task11(){
 	document.write(" <br>");
-	document.write("task 11");
+	document.write("11. Напечатать те из двузначных чисел которые делятся на 4, но не делятся на 6.");
 	document.write("<br>");
 	for(i=0;i<=99;i++){
 		if(i % 4 == 0 && i % 6 != 0){
@@ -185,16 +198,24 @@
 			document.write("<br>");
 		}
 	}
+}
 	 <!-- 12 -->
-	
+function task12(){
+	document.write(" <br>");
+	document.write("12. Найти произведение двузначных нечетных чисел кратных 13 <br>");
 	var mult = 1;
 	for (var i = 10; i <= 99; i++) {
 		if (i % 13 == 0) {
 			mult *= i;
+			document.write(i + "<br>");
 		}
 	}
-	document.write("your result is - " + mult);
+	document.write("<br>your result is - " + mult);
+}	
 	 <!-- 13 -->
+function task13(){
+	document.write(" <br>");
+	document.write("13. Найти сумму чисел от 100 до 200 кратных 17<br>");
 	var sum = 0;
 	for (var i = 100; i <= 200; i++) {
 		if (i % 17 == 0) {
@@ -202,38 +223,60 @@
 			sum += i;
 		}
 	}
-	document.write(sum);
+	document.write("sum : " + sum);
+}
 	 <!-- 14 -->
+function task14(){
+	document.write(" <br>");
+	document.write("14. Составьте программу, которая вычисляет сумму квадратов чисел от 1 до введенного вами целого числа N <br>");
 	var sum = 0;
 	var n = parseInt(prompt("enter your number"));
 	for (var i = 1; i <= n; i++) {
 		sum += i * i;
 	}
 	document.write("sum = " + sum);
+}
 	<!-- 15 -->
+function task15(){
+	document.write(" <br>");
+	document.write("15. Написать программу, которая по заданным значениям чисел a и b находит a в степени b <br>");
 	var a = parseInt(prompt("enter first number"));
 	var b = parseInt(prompt("enter second number"));var pow = 0;
 	for (var i = a; i <= b; i++) {
 		pow += a * a;
 	}
 	document.write("power = " + pow);
+}
 	<!-- 16 -->
+function task16(){
+	document.write(" <br>");
+	document.write("16. В бригаде, работающей на уборке сена, имеется N сенокосилок.Первая сенокосилка работала m часов, а каждая следующая на 10 минут больше, чем предыдущая.Сколько часов проработала вся бригада? <br>");
 	var mower = parseInt(prompt("enter number of mowers"));
 	var t = parseInt(prompt("how much of time first mower worked ?")) * 60;
 	var ct = t;
 	for (var i = 1; i < mower; i++) {
 		t += 10;
+		ct += t;
+		
 	}
-	document.write("common time = " + (t + ct));
+	document.write("common working time is : " + ct + " minutes");
+}
 	<!-- 17 -->
+function task17(){
+	document.write(" <br>");
+	document.write("17. В ЭВМ вводятся по очереди данные о росте N учащихся класса. Определить средний рост учащихся класса.");
 	var pupils = parseInt(prompt("enter number of pupils"));
 	var sum = 0;
 	for (var i = 1; i <= pupils; i++) {
-		var height = parseInt(prompt("enter the height of  pupil"));
+		var height = parseFloat(prompt("enter the height of  pupil"));
 		sum += height;
 	}
 	document.write("average height of pupils = " + (sum / pupils));
+}
 	<!-- 18 -->
+function task18(){
+	document.write(" <br>");
+	document.write("18. Задано натуральное число N. Найти количество натуральных чисел, не превосходящих N и не делящихся ни на одно из чисел 2,3,5 <br>");
 	var num = parseInt(prompt("enter natural number"));
 	var sum = 0;
 	for (var i = 0; i <= num; i++) {
@@ -243,31 +286,43 @@
 		}
 	}
 	document.write("quantity of your numbers are : " + sum);
+}
 	<!-- 19 -->
-	var num ;
+function task19(){
+	document.write(" <br>");
+	document.write("19. Два двузначных числа, записанных одно за другим , образуют четырёхзначное число, которое делится на их произведение. Найти эти числа <br>");
+	var num = "" ;
 	var count = 1;
 	for (var i = 10; i < 100; i++) {
 		for (var j = 10; j < 100; j++){
-			num = "" + i + j;								
-			if ((parseInt(num) % (i * j) == 0)){
+			num = i.toString() + j.toString();								
+			if ( parseInt(num) % (i * j) == 0){
 				document.write("Pair " + count + ": " + i + " and " + j + "<br>");
 				count++;
 			};			
 		}
 	}
+}
 	<!-- 20 -->
+function task20(){
+	document.write(" <br>");
+	document.write("20. даны два двузначных числа А и В. Из этих чисел составили 2 четырехзначных числа: первое число получили путем написания сначала числа А, затем В.Найти числа А и В если известно , что первое четырехзначное число нацело делится на 99, а второе на 49. <br>");
 	var num1;
 	var num2;
 	for (var i = 10; i < 100; i++) {
 		for (var j = 10; j < 100; j++){
-			num1 = '' + i + j;
-			num2 = '' + j + i;
+			num1 = i.toString() + j.toString();
+			num2 = j.toString() + i.toString();
 			if ((parseInt(num1) % 99 == 0) && (parseInt(num2) % 49 == 0)){
 				document.write("first number : " + num1 + "<br>" + "second number : " + num2);
 			};
 		}
-	}	
+	}
+}	
 	<!-- 21 -->
+function task21(){
+	document.write(" <br>");
+	document.write("21. Дано натуральное n. вычислить 1/(2 в квадрате) + 1/(4 в квадрате)+ ... + 1/(2n в квадрате) ( в квадрате только n)<br>");
 	var n = parseInt(prompt("enter  natural number"));
 	var res = 0;
 	var pov;
@@ -276,14 +331,22 @@
 		res += 1 / pow;
 	}
 	document.write (res);
+}
 	<!-- 22 -->
+function task22(){
+	document.write(" <br>");
+	document.write("22. дано натуральное n. вычислить: 1 + 1/2 + 1/3 + 1/4 + ... + 1/n.<br>");
 	var num = parseInt(prompt("enter natural number"));
 	var res = 0;
 	for (var i = 1; i <= num; i++) {
 		res += 1 / i;
 	}
 	document.write(res);
+}
 	<!-- 23 -->
+function task23(){
+	document.write(" <br>");
+	document.write("23.Вычислить : 1+2+4+8+...+ 2 в 10 степени.<br>");
 	var res = 1;
 	var pow = 1;
 	for (var i = 1; i <= 10; i++) {
@@ -291,7 +354,11 @@
 		res += pow;
 	}	
 	document.write(res);
+}
 	<!-- 24 -->
+function task24(){
+	document.write(" <br>");
+	document.write("24. Вычислить: (1+2)*(1+2+3)*...*(1+2+...+10)<br>");
 	var res = 1;
 	var sum = 0;
 	for (var i = 1; i <= 10; i++) {
@@ -302,7 +369,11 @@
 		sum = 0;
 	}
 	document.write(res);
+}
 	<!-- 25 -->
+function task25(){
+	document.write(" <br>");
+	document.write("25. Даны действительное (а) и натуральное (n). вычислить: a(a+1)...(a+n-1)<br>");
 	var a = parseFloat(prompt("enter float number"));
 	var n = parseInt(prompt("enter integer number"));
 	var res = 1;
@@ -310,7 +381,11 @@
 		res = res * (a + i - 1) ;
 	}
 	document.write(res);
+}
 	<!--26 -->
+function task26(){
+	document.write(" <br>");
+	document.write("26. даны действительно х и натуральное n. вычислить: sin x + sin x в квадрате + ... sin x в степени n.<br>");
 	var x = parseFloat(prompt("enter float number"));
 	var n = parseInt(prompt("enter integer number"));
 	var res = 0;
@@ -319,8 +394,12 @@
 		x = x * x;
 	}
 	document.write(res);
-	<!-- 27 -->
-		var money = parseInt(prompt("how much money child has"));
+}
+	<!-- 27 -->document.write(" <br>");
+function task27(){
+	document.write(" <br>");
+	document.write("27. У первокласника пети m рублей.Мороженое стоит k рублей.<br>");
+	var money = parseInt(prompt("how much money child has"));
 	var price = parseInt(prompt("how much icecream costs"));
 	var i = 0;
 	while (money > 0) {
@@ -330,8 +409,12 @@
 		money = money - price;
 		i++;
 	}
-	document.write("he ate " + i + " icecreams, he has " + money + " rubls");	
+	document.write("<br>he ate " + i + " icecreams, he has " + money + " rubls");
+}	
 	<!-- 28 -->
+function task28(){
+	document.write(" <br>");
+	document.write("28. Бизнессмен взял ссуду m тысяч рублей в банке под 20% годовых. через сколько лет его долг превысит s тысяч рублей, если за это время он не будет отдавать долг.");
 	var credit = parseInt(prompt("enter sum of credit"));
 	var s = parseInt(prompt("enter limit"));
 	var i = 0;
@@ -342,8 +425,12 @@
 		credit += credit * 0.2;
 		i++;
 	}
-	document.write("credit will be passed in " + i + " years");	
+	document.write("<br>limit will be passed in " + i + " years");
+}	
 	<!-- 29 -->
+function task29(){
+	document.write(" <br>");
+	document.write("29. с помощью оператора while напишите программу вывода всех четных чисел в диапазоне от 2 до 100 включительно.");
 	var i = 0;
 	while (i <= 100) {
 		if (i % 2 == 0) {
@@ -351,7 +438,11 @@
 		}
 		i++;
 	}
+}
 	<!-- 30 -->
+function task30(){
+	document.write(" <br>");
+	document.write("30. С помощью оператора while напишите программу определения суммы всех нечетных чисел в диапазоне от 1 до 99 включительно.");
 	var sum = 0;
 	var i = 0;
 	while (i < 100) {
@@ -361,8 +452,12 @@
 	}
 	i++;
 	}
-	document.write(sum);
+	document.write("sum = " + sum);
+}
 	<!-- 31 -->
+function task31(){
+	document.write(" <br>");
+	document.write("31. Имеется кусок ткани длинной M метров.<br>");
 	var i = 1;
 	var material = parseInt(prompt("enter length of material"));
 	var piece = parseInt(prompt("enter length of piece"));
@@ -376,9 +471,9 @@
 	i++;
 	}
 	document.write("rest : " + (material + piece) + "m");
+}
 	</script>
 
-  <p>...Конец документа</p>
 
 </body>
 
